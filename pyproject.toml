@@ -23,3 +23,6 @@ markers = [
     "unit: Testes unitarios isolados das regras de negocio",
 ]
 addopts = "-v --strict-markers"
+
+[tool.hatch.build.targets.wheel]
+packages = ["app"]
