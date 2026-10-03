@@ -1,0 +1,25 @@
+[project]
+name = "qts-at1-engenharia-testes"
+version = "0.1.0"
+description = "Projeto Pratico AT1 - Engenharia de Testes, Cobertura e Governanca de IA"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-cov>=5.0.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+markers = [
+    "unit: Testes unitarios isolados das regras de negocio",
+]
+addopts = "-v --strict-markers"
